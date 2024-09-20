@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Badges Hunting</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon"> <!-- Add your favicon path -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+        }
+        .mode-switch {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .mode-switch button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .mode-switch button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Welcome to Roblox Badges Hunting</h1>
+        <p>Your go-to place for all things Roblox badges!</p>
+    </header>
+
+    <div class="mode-switch">
+        <button onclick="switchMode()" aria-label="Switch color mode">Switch to Dark Mode</button>
+    </div>
+
+    <div class="container">
+        <!-- Add your content here -->
+        <h2>About</h2>
+        <p>This section will contain information about your badges hunting journey.</p>
+
+        <h2>Projects</h2>
+        <p>This section will showcase your badges and related projects.</p>
+
+        <h2>Contact</h2>
+        <p>Include your contact information or a form here if you wish.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 all rights reserved</p>
+    </footer>
+
+    <script>
+        function switchMode() {
+            const body = document.body;
+            const button = document.querySelector('.mode-switch button');
+            
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                button.textContent = 'Switch to Light Mode';
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = 'Switch to Dark Mode';
+            }
+        }
+    </script>
+</body>
+</html>
